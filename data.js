@@ -1,16 +1,9 @@
-var axios = require("axios");
+const axios = require("axios");
 
-var accKey = "1b7c6a4fc60537946402771ed99da19afa9e662b8f4fcf5f80dfc6256e41f34d";
-var pr = new Promise(function (resolve, reject) {
-    axios
-        .get('https://api.unsplash.com/photos/?per_page=12&client_id=' + accKey)
-        .then(data => {
-            console.log("data fetched!");
-            resolve(data.data);
-        })
-        .catch(err => {
-            reject(err);
-        });
-});
+const BASE_URL = "https://api.unsplash.com/photos/";
+const ACC_KEY = "1b7c6a4fc60537946402771ed99da19afa9e662b8f4fcf5f80dfc6256e41f34d";
+const PARAM1 = "client_id=" + ACC_KEY;
+const PHOTOS_PER_PAGE = 12;
+const PARAM2 = "per_page=" + PHOTOS_PER_PAGE;
 
-module.exports = pr;
+module.exports = axios.get(BASE_URL + "?" + PARAM1 + "&" + PARAM2);

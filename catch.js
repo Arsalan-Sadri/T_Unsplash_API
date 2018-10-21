@@ -1,8 +1,9 @@
-var pr = require("./data");
+var ax = require("./data");
 
-pr.then(function (data) {
-    console.log(data);
-    module.exports = "test";
-});
-
-console.log("...rest of the code goes inside .then(), not here!");
+ax.then(data => {
+        console.log("data fetched!");
+        console.log(data.data);
+    })
+    .catch(err => {
+        console.log(err);
+    });
