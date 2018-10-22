@@ -15,3 +15,7 @@ module.exports = axios.get(BASE_URL + "?" + PARAM1 + "&" + PARAM2 + "&" + PARAM3
     just remove "search" from the base url and make data.data.results to
     data.data
 */
+
+
+// postman link for testing
+// https://api.unsplash.com/photos?client_id=1b7c6a4fc60537946402771ed99da19afa9e662b8f4fcf5f80dfc6256e41f34d
